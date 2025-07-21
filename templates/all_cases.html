@@ -1,0 +1,15 @@
+<h3>Todos los casos registrados:</h3>
+<table border="1">
+    <tr>
+        {% for key in cases[0].keys() %}
+        <th>{{ key }}</th>
+        {% endfor %}
+    </tr>
+    {% for row in cases %}
+    <tr>
+        {% for value in row.values() %}
+        <td>{{ value }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>

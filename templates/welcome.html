@@ -1,0 +1,6 @@
+<h2>¡Bienvenido, {{ email }}!</h2>
+<ul>
+    <li><a href="{{ url_for('add_case', email=email) }}">Agregar nuevo caso</a></li>
+    <li><a href="{{ url_for('view_case') }}">Revisar Caso por ID</a></li>
+    <li><a href="{{ url_for('all_cases') }}">Mostrar todos los casos</a></li>
+</ul>

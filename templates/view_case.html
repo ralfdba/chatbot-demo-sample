@@ -1,0 +1,16 @@
+<form method="post">
+    <h3>Buscar caso por ID:</h3>
+    <input type="text" name="caso" required>
+    <button type="submit">Buscar</button>
+</form>
+{% if case %}
+    <h4>Resultado:</h4>
+    {% for row in case %}
+        <ul>
+            {% for key, value in row.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>Recomendación IA:</strong> {{ recomendacion }}</p>
+    {% endfor %}
+{% endif %}
